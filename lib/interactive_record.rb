@@ -48,4 +48,9 @@ class InteractiveRecord
     # DB[:conn].execute('SELECT * FROM "students" WHERE name = "Jan"')
     DB[:conn].execute(sql, name)
   end
+
+  def self.find_by(attribute)
+    binding.pry
+    sql = "SELECT * FROM #{self.table_name} WHERE #{}"
+  end
 end
